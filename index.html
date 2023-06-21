@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="icon" type="image/svg+xml" href="https://openweathermap.org/img/wn/$02d@4x.png"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Weather</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-sm">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <i class="bi bi-moon"></i>
+                    </a>
+                    <form class="flex-grow-1">
+                        <input class="form-control" type="search" placeholder="What weather in ..." aria-label="Search" value="shymkent">
+                    </form>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div class="carousel-item introduce active">
+                <div class="container-fluid">
+                    <div class="my-3">
+                        <h1>Let's go look on weather</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item weather">
+                <div class="container-fluid">
+                    <div class="my-3">
+                        <div class="d-flex">
+                            <h1 class="city"></h1>
+                            <span class="country"></span>
+                        </div>
+
+                        <span class="time"></span>
+                    </div>
+
+                    <div class="row-cards row">
+                        <!-- Dynamic added cards -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item not-found">
+                <div class="container-fluid">
+                    <div class="my-3">
+                        <h1>Ooops! Don't work :\</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item loading">
+                <div class="container-fluid">
+                    <div class="my-3">
+                        <h1>Loading...</h1>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="all-information" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header border-0">
+                            <h1 class="modal-title fs-5" id="modal-title"></h1>
+                            <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                                <i class="bi bi-x-lg"></i>
+                            </button>
+                        </div>
+
+                        <div class="modal-body px-3 pt-0 pb-3">
+                            <ul class="weather-time">
+                                <!-- Dynamic added cards -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script type="module" src="/src/main.ts"></script>
+    </body>
+</html>

@@ -1,0 +1,135 @@
+@import "bootstrap";
+@import "bootstrap-icons";
+
+:root {
+  --white-color: #fff;
+
+  --deep-dark-color: rgb(32,33,36);
+  --dark-color: #353535ff;
+  --ease-dark-color: #292a2d;
+
+  --blue-color: rgb(25, 103, 210);
+
+  --clear-sky-color: #5bc9ff;
+  --cloud-color: #81a5ba;
+  --rain-color: #0e1a26;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  color: var(--white-color);
+  background-color: var(--dark-color);
+
+}
+
+header {
+  background-color: transparent;
+}
+
+main {
+  overflow: hidden;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+}
+
+h1 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.margin-right {
+  margin-right: 1rem;
+}
+
+.navbar-brand {
+  color: var(--white-color);
+}
+
+.navbar-brand:hover,
+.navbar-brand:focus {
+  color: unset;
+}
+
+.form-control {
+  color: var(--white-color);
+  background-color: var(--ease-dark-color);
+  border: none;
+  border-radius: 2rem;
+  transition: all  0.4s ease;
+}
+
+.form-control:hover {
+  background-color: var(--deep-dark-color);
+}
+
+.form-control:focus {
+  color: var(--white-color);
+  background-color: var(--ease-dark-color);
+  box-shadow: none;
+}
+
+.form-control::placeholder {
+  color: var(--white-color);
+  box-shadow: none;
+}
+
+.card-item {
+  transition: ease .4s;
+}
+
+.card-item:hover {
+  transform: translateY(-10px);
+}
+
+.card-itd {
+  background-color: var(--deep-dark-color);
+  color: var(--white-color);
+}
+
+.carousel-item {
+  min-height: 80vh;
+}
+
+.show {
+  transform: translateX(0);
+}
+
+.modal-content {
+  background-color: var(--deep-dark-color);
+}
+
+.bi-x-lg:before {
+  color: var(--white-color);
+}
+
+.card-itd {
+  position: relative;
+}
+
+.card-itd:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
