@@ -11,9 +11,9 @@ const weatherTime = document.querySelector('.weather-time') as HTMLElement
 export function addEventCard(weather: IWeather, cards: NodeListOf<HTMLElement>): void {
     for (let i: number = 0; i < cards.length; i++) {
         cards[i].addEventListener('click', (e:MouseEvent): void => {
-            const day = e.target.nextSibling.parentNode.id
-            modalTitle.innerHTML = week(day)
-            modalContent.style.backgroundColor = e.target.id
+            const day = (e.target as any).nextSibling.parentNode.id
+            modalTitle.innerHTML = week(day) as string;
+            modalContent.style.backgroundColor = (e.target as any).id
             createList(weather, day)
         })
     }
@@ -45,7 +45,7 @@ function form(weather: IWeatherList[]): string {
     let htmlString = ''
     console.log(weather)
     weather.forEach((weatherList: IWeatherList) => {
-        let {main, description, icon} = weatherList.weather[0]
+        let {description, icon} = weatherList.weather[0]
         let {temp_max, temp_min, humidity} = weatherList.main
         let daytime = weatherList.dt_txt.slice(-9)
 
